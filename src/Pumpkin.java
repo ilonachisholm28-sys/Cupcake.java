@@ -10,10 +10,10 @@ public class Pumpkin {
     //clases r also similar to variabkes w big container that has smaller tupperware inside of it
     //constructer put value into boxes
 
-    public Pumpkin (){
-        color = "orange";
-        size = 10;
-        isJackolantern = false;
+    public Pumpkin (int pSize, boolean pIsJackolantern, String pColor){
+        color = pColor;
+        size = pSize;
+        isJackolantern = pIsJackolantern;
     }
 
 
@@ -24,4 +24,10 @@ public class Pumpkin {
     //color
     //size
     //is Jackolantern
+    public void printInfo(){
+        System.out.println("the pumpkin's information is  ");
+        System.out.println(size);
+        System.out.println("the pumpkin's color is " + color); //readable
+        System.out.println("isJackolantern " + isJackolantern);
+    }
 }

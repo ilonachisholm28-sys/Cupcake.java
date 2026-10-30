@@ -17,6 +17,7 @@ public class Factory {
     public Pumpkin pumpkin1;
     public Pumpkin pumpkin2;
 public Pumpkin pumpkin3;
+ public int randomSize;
     public static void main(String[] args) {
 Factory a = new Factory();
     }     
@@ -30,23 +31,29 @@ Factory a = new Factory();
         System.out.println("the owner is " + owner);
         //todo: print out who the owner is
 
-        pumpkin1 = new Pumpkin();
+        pumpkin1 = new Pumpkin(20, true, "Orange");
         System.out.println(pumpkin1.color);
         System.out.println(pumpkin1.size);
         System.out.println("it is " + pumpkin1.isJackolantern + " the pumpkin is a Jacko lantern");
-   pumpkin1.color = "blue";
+
+        pumpkin1.color = "blue";
         System.out.println(pumpkin1.color);
-pumpkin2 = new Pumpkin();
+
+        randomSize=(int)(Math.random() * 31); //range 0-30
+pumpkin2 = new Pumpkin(randomSize, false, "Rainbow");
+        System.out.println("random" +pumpkin2.size);
         System.out.println(pumpkin2.color);
         pumpkin2.color = "Blue";
         pumpkin2.size = pumpkin1.size * 2;
         System.out.println(pumpkin2.size);
 
-        pumpkin3 = new Pumpkin();
+        pumpkin3 = new Pumpkin(randomSize);
         System.out.println(pumpkin3.color);
         pumpkin3.color = "Green";
         System.out.println(pumpkin3.color);
         pumpkin3.size = 40;
         System.out.println(pumpkin3.size);
+        pumpkin2.printInfo();
     }
+
 }
